@@ -1,0 +1,30 @@
+{
+"namespace":"com.lwk.avro.hello",
+"protocol":"HelloWorld",
+"doc":"i am an interface",
+"types":[
+    {
+        "name":"Greeting",
+        "doc":"i am a class",
+        "type":"record",
+        "fields":[ { "name":"message","type":"string" } ]
+
+    },
+    {
+    "name":"Curse",
+    "doc":"i am a exception class",
+    "type":"error",
+    "fields":[{"name":"message","type":"string"}]
+    }
+],
+"messages":{
+    "hello":{
+        "doc":"i am a method",
+        "request":[{"name":"greeting","type":"Greeting"}],
+        "response":"Greeting",
+        "errors":["Curse"]
+    }
+
+}
+
+}
